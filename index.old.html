@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html>
+<title>W3.CSS Template</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body,h1 {font-family: "Raleway", sans-serif}
+body, html {height: 100%}
+.bgimg {
+  background-image: url('img/box2.jpg');
+  min-height: 100%;
+  background-position: center;
+  background-size: cover;
+}
+div.gallery {
+  margin: 5px;
+  border: 1px solid #ccc;
+  float: left;
+  width: 180px;
+}
+
+div.gallery:hover {
+  border: 1px solid #777;
+}
+
+div.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+}
+
+.content {
+    padding:20px;
+    width:450px;
+    position:relative;
+    background: rgb(204, 204, 204); /* Fallback for older browsers without RGBA-support */
+    background: rgba(204, 204, 204, 0.5);
+}
+
+/* Style all font awesome icons */
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+}
+
+/* Add a hover effect if you want */
+.fa:hover {
+  opacity: 0.7;
+}
+
+/* Set a specific color for each brand */
+
+/* Facebook */
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+/* Twitter */
+.fa-instagram {
+  background: #33475b;
+  color: white;
+}
+
+/* Twitter */
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+
+/* Twitter */
+.fa-envelope-square {
+  background: #000000;
+  color: white;
+}
+
+</style>
+<head>
+  <script>
+    // Open the Modal
+    function openModal() {
+      document.getElementById("myModal").style.display = "block";
+    }
+
+    // Close the Modal
+    function closeModal() {
+      document.getElementById("myModal").style.display = "none";
+    }
+
+    var slideIndex = 1;
+    showSlides(slideIndex);
+
+    // Next/previous controls
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+
+    // Thumbnail image controls
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      var dots = document.getElementsByClassName("demo");
+      var captionText = document.getElementById("caption");
+      if (n > slides.length) {slideIndex = 1}
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";
+      dots[slideIndex-1].className += " active";
+      captionText.innerHTML = dots[slideIndex-1].alt;
+    }
+  </script>
+</head>
+<body>
+
+<div class="bgimg w3-display-container w3-animate-opacity w3-text-white" >
+  <div class="w3-display-topleft w3-padding-large w3-xlarge">
+    <img src="img/logo.png" class="w3-round w3-image " width="100" height="100">
+    by Maradeko Holding Ltd.
+  </div>
+  <div class="w3-display-middle" style="margin-top: 280px;">
+    <h1 class="content w3-jumbo w3-animate-top w3-center">TINY MELON</h1>
+    <hr class="w3-border-grey" style="margin:auto;width:40%">
+    <p class="w3-large w3-center">Your tiny stories cherished forever...</p>
+  </div>
+  <div class="w3-display-bottomleft w3-padding-large">
+    Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a>
+  </div>
+</div>
+
+<!-- Page content -->
+<div class="w3-content" style="max-width:1100px">
+
+    <!-- About Section -->
+    <div class="w3-row w3-padding-64" id="about">
+      <div class="w3-col m6 w3-padding-large w3-hide-small">
+       <img src="img/sea_watermelon.jpg" class="w3-round w3-image w3-opacity-min" alt="Table Setting" width="600" height="750">
+      </div>
+  
+      <div class="w3-col m6 w3-padding-large">
+        <h1 class="w3-center">About Tiny Melon</h1><br>
+        <h5 class="w3-center">Cherish your little storeis</h5>
+        <p class="w3-large">We are tinymelon and we know being a family is the most awesome, scary, hilarious, anxious, joyous and downright exhausting thing you'll ever do. Fraught moments stretch like eternity, while precious years go by in a heartbeat.
+  
+          Becoming a parent means you're never alone, but sometimes you feel exactly that. 
+          
+          We're right with you, because at Tinymelon, we're a family too. 
+          
+          So while you're bringing up humans, we're bringing up ideas.
+          
+          And, like you, putting our absolute all into it.
+          
+          We believe all families deserve the best we can give. Quality; naturally. Affordability; definitely. Compromise; not on our watch.
+          
+          We challenge ourselves to make your life easier. To swap niggles for giggles, from pregnancy to primary school and beyond. So that you can win this crazy-fun family thing! <!--<span class="w3-tag w3-light-grey">seasonal</span> ingredients.</p> -->
+        <p class="w3-large w3-text-grey w3-hide-medium">Tinymelon help you to cherish those little stories and relive the memories.</p>
+      </div>
+    </div>
+    
+    <hr>
+  </div>
+
+
+  <!-- Produt content 
+  <div class="w3-content w3-display-container">
+    <img class="mySlides" src="img/1.jpg">
+    <img class="mySlides" src="img/10.jpg">
+    <img class="mySlides" src="img/2.jpg">
+    <div class="w3-center w3-display-bottommiddle" style="width:100%">
+      <div class="w3-left" onclick="plusDivs(-1)">&#10094;</div>
+      <div class="w3-right" onclick="plusDivs(1)">&#10095;</div>
+      <span class="w3-badge demo w3-border" onclick="currentDiv(1)"></span>
+      <span class="w3-badge demo w3-border" onclick="currentDiv(2)"></span>
+      <span class="w3-badge demo w3-border" onclick="currentDiv(3)"></span>
+    </div>
+    Photo by Mediamodifier, Janko Ferlič, Christian Fickinger, Manuel Schinner on Unsplash
+  </div>
+  -->
+
+  <div class="w3-content">
+    <div class="gallery">
+      <a target="_blank" href="img/1.jpg">
+        <img src="img/1.jpg" alt="Cinque Terre" width="1000" height="500">
+      </a>
+      <div class="desc">Baby's little firsts</div>
+    </div>
+    
+    <div class="gallery">
+      <a target="_blank" href="img/10.jpg">
+        <img src="img/10.jpg" alt="Forest" width="1000" height="400">
+      </a>
+      <div class="desc">A keep sake box for your memories</div>
+    </div>
+    
+    <div class="gallery">
+      <a target="_blank" href="img/2.jpg">
+        <img src="img/2.jpg" alt="Northern Lights" width="1000" height="400">
+      </a>
+      <div class="desc">The tiny steps into your new life</div>
+    </div>
+    
+    <div class="gallery">
+      <a target="_blank" href="img/20.jpg">
+        <img src="img/20.jpg" alt="Mountains" width="1000" height="400">
+      </a>
+      <div class="desc">Babies first toys</div>
+    </div>
+
+    <div class="gallery">
+      <a target="_blank" href="img/30.jpg">
+        <img src="img/30.jpg" alt="Mountains" width="1000" height="400">
+      </a>
+      <div class="desc">Save the cards and messages from loved ones</div>
+    </div>
+
+    <div class="gallery">
+      <a target="_blank" href="img/3.jpg">
+        <img src="img/3.jpg" alt="Mountains" width="1000" height="400">
+      </a>
+      <div class="desc">Little socks to remind you of the little feet</div>
+    </div>
+
+    
+    
+    <div class="gallery">
+      <a target="_blank" href="img/4.jpg">
+        <img src="img/4.jpg" alt="Mountains" width="1000" height="400">
+      </a>
+      <div class="desc">Cheris these memories forever</div>
+    </div>
+    <div class="gallery">
+      <a target="_blank" href="img/40.jpg">
+        <img src="img/40.jpg" alt="Mountains" width="1000" height="400">
+      </a>
+      <div class="desc">A memorable gift for those special moments</div>
+    </div>
+    <div class="gallery">
+      <a target="_blank" href="img/box1.jpg">
+        <img src="img/box1.jpg" alt="Mountains" width="1000" height="400">
+      </a>
+      <div class="desc">Designed with love in the UK</div>
+    </div>
+    <div class="gallery">
+      <a target="_blank" href="img/box2.jpg">
+        <img src="img/box2.jpg" alt="Mountains" width="1000" height="400">
+      </a>
+      <div class="desc">Handcrafted by artisans for your keepsakes</div>
+    </div> 
+
+  </div>
+  
+
+  <div class="w3-content" style="max-width:1100px;">
+  
+      <!-- About Section -->
+      <div class="w3-row w3-padding-64" id="about">
+        <div class="w3-col m6 w3-padding-large w3-hide-small">
+         <img src="img/location.jpg" class="w3-round w3-image w3-opacity-min" alt="Table Setting" width="600" height="750">
+        </div>
+    
+        <div class="w3-col m6 w3-padding-large">
+          <h1 class="w3-center">Contact US</h1><br>
+          <h5 class="w3-large">We are a small London based business</h5>
+          <p class="w3-large"> Get in touch send us an e-mail or call us<!--<span class="w3-tag w3-light-grey">seasonal</span> ingredients.</p> -->
+          <a href="tel:+44 7803297517"><h5>Call us now</h5></a>
+          <a href="tel:+44 7803297517"><h4>+44 7803 297 517</h4></a>
+          <p class="w3-large w3-text-grey w3-hide-medium">Tinymelon help you to cherish those little stories and relive the memories.</p>
+          <!-- Add font awesome icons -->
+          <a href="https://www.facebook.com/Tiny-Melon-114011934268655" class="fa fa-facebook" target=”_blank”></a>
+          <a href="https://www.instagram.com/tinymelon.co.uk/" class="fa fa-instagram"  target=”_blank”></a>
+          <a href="#" class="fa fa-twitter"></a>
+          <a href='mailto:maradeko.holding@gmail.com' class="fa fa-envelope-square"></a>
+        </div>
+      </div>
+      
+      <hr>
+    </div>
+
+
+<!--================Footer Area =================-->
+<footer class="w3-content">
+  <div class="w3-content">
+      <div class="container">
+          <div class="row footer_widget_inner">
+              <div class="col-lg-4 col-sm-6">
+                  <aside class="f_widget f_about_widget">
+                      <img src="img/footer-logo-orox.png" alt="">
+                      <p>Memorable hand crafted products for your tiny memories</p>
+                  </aside>
+              </div>
+              
+              
+          </div>
+      </div>
+  </div>
+  <div class="footer_copyright">
+      <div class="container">
+          <div class="float-sm-left">
+              <h5><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | tinymelon tinymelon logo are registered trademarks of Maradeko Holding company
+<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></h5>
+          </div>
+      </div>
+  </div>
+</footer>
+<!--================End Footer Area =================-->
+
+
+
+</body>
+</html>
