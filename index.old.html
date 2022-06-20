@@ -7,34 +7,7 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
-body,h1 {font-family: "Raleway", sans-serif}
-body, html {height: 100%}
-.bgimg {
-  background-image: url('img/box2.jpg');
-  min-height: 100%;
-  background-position: center;
-  background-size: cover;
-}
-div.gallery {
-  margin: 5px;
-  border: 1px solid #ccc;
-  float: left;
-  width: 180px;
-}
 
-div.gallery:hover {
-  border: 1px solid #777;
-}
-
-div.gallery img {
-  width: 100%;
-  height: auto;
-}
-
-div.desc {
-  padding: 15px;
-  text-align: center;
-}
 
 .content {
     padding:20px;
@@ -84,53 +57,62 @@ div.desc {
   color: white;
 }
 
+/* Background Vide */
+/* Style the video: 100% width and height to cover the entire window */
+#myVideo {
+  /*position: fixed;*/
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+}
+
+/*image grid style */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.row {
+  display: -ms-flexbox; /* IE 10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE 10 */
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+/* Create two equal columns that sits next to each other */
+.column {
+  -ms-flex: 25%; /* IE 10 */
+  flex: 0 1 25%;
+  padding: 0 4px;
+}
+
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
+}
+
+
 </style>
 <head>
   <script>
-    // Open the Modal
-    function openModal() {
-      document.getElementById("myModal").style.display = "block";
-    }
-
-    // Close the Modal
-    function closeModal() {
-      document.getElementById("myModal").style.display = "none";
-    }
-
-    var slideIndex = 1;
-    showSlides(slideIndex);
-
-    // Next/previous controls
-    function plusSlides(n) {
-      showSlides(slideIndex += n);
-    }
-
-    // Thumbnail image controls
-    function currentSlide(n) {
-      showSlides(slideIndex = n);
-    }
-
-    function showSlides(n) {
-      var i;
-      var slides = document.getElementsByClassName("mySlides");
-      var dots = document.getElementsByClassName("demo");
-      var captionText = document.getElementById("caption");
-      if (n > slides.length) {slideIndex = 1}
-      if (n < 1) {slideIndex = slides.length}
-      for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
-      }
-      for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" active", "");
-      }
-      slides[slideIndex-1].style.display = "block";
-      dots[slideIndex-1].className += " active";
-      captionText.innerHTML = dots[slideIndex-1].alt;
-    }
+    
+    
   </script>
 </head>
 <body>
 
+<!-- The video -->
+<video autoplay muted loop id="myVideo">
+  <source src="img/knitting.mp4" type="video/mp4">
+</video>
+
+<!--
 <div class="bgimg w3-display-container w3-animate-opacity w3-text-white" >
   <div class="w3-display-topleft w3-padding-large w3-xlarge">
     <img src="img/logo.png" class="w3-round w3-image " width="100" height="100">
@@ -145,6 +127,8 @@ div.desc {
     Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a>
   </div>
 </div>
+-->
+
 
 <!-- Page content -->
 <div class="w3-content" style="max-width:1100px">
@@ -195,77 +179,45 @@ div.desc {
   </div>
   -->
 
-  <div class="w3-content">
-    <div class="gallery">
-      <a target="_blank" href="img/1.jpg">
-        <img src="img/1.jpg" alt="Cinque Terre" width="1000" height="500">
-      </a>
-      <div class="desc">Baby's little firsts</div>
+  
+  <div class="row">
+    <div class="column">
+      <img src="img/bunny/1.jpg" width="100%">
+      <img src="img/bunny/2.jpg" width="100%">
+      <img src="img/bunny/3.jpg" width="100%">
+      <img src="img/bunny/4.jpg" width="100%">
+      <img src="img/bunny/5.jpg" width="100%">
+      <img src="img/bunny/6.jpg" width="100%">
+      <img src="img/bunny/7.jpg" width="100%">
     </div>
-    
-    <div class="gallery">
-      <a target="_blank" href="img/10.jpg">
-        <img src="img/10.jpg" alt="Forest" width="1000" height="400">
-      </a>
-      <div class="desc">A keep sake box for your memories</div>
+    <div class="column">
+      <img src="img/bunny/8.jpg" width="100%">
+      <img src="img/bunny/9.jpg" width="100%">
+      <img src="img/bunny/10.jpg" width="100%">
+      <img src="img/bunny/11.jpg" width="100%">
+      <img src="img/bunny/12.jpg" width="100%">
+      <img src="img/bunny/13.jpg" width="100%">
     </div>
-    
-    <div class="gallery">
-      <a target="_blank" href="img/2.jpg">
-        <img src="img/2.jpg" alt="Northern Lights" width="1000" height="400">
-      </a>
-      <div class="desc">The tiny steps into your new life</div>
+    <div class="column">
+      <img src="img/bunny/14.jpg" width="100%">
+      <img src="img/bunny/15.jpg" width="100%">
+      <img src="img/bunny/16.jpg" width="100%">
+      <img src="img/bunny/17.jpg" width="100%">
+      <img src="img/bunny/18.jpg" width="100%">
+      <img src="img/bunny/19.jpg" width="100%">
+      <img src="img/bunny/20.jpg" width="100%">
     </div>
-    
-    <div class="gallery">
-      <a target="_blank" href="img/20.jpg">
-        <img src="img/20.jpg" alt="Mountains" width="1000" height="400">
-      </a>
-      <div class="desc">Babies first toys</div>
+    <div class="column">
+      <img src="img/bunny/21.jpg" width="100%">
+      <img src="img/bunny/22.jpg" width="100%">
+      <img src="img/bunny/23.jpg" width="100%">
+      <img src="img/bunny/24.jpg" width="100%">
+      <img src="img/bunny/25.jpg" width="100%">
+      <img src="img/bunny/26.jpg" width="100%">
     </div>
-
-    <div class="gallery">
-      <a target="_blank" href="img/30.jpg">
-        <img src="img/30.jpg" alt="Mountains" width="1000" height="400">
-      </a>
-      <div class="desc">Save the cards and messages from loved ones</div>
-    </div>
-
-    <div class="gallery">
-      <a target="_blank" href="img/3.jpg">
-        <img src="img/3.jpg" alt="Mountains" width="1000" height="400">
-      </a>
-      <div class="desc">Little socks to remind you of the little feet</div>
-    </div>
-
-    
-    
-    <div class="gallery">
-      <a target="_blank" href="img/4.jpg">
-        <img src="img/4.jpg" alt="Mountains" width="1000" height="400">
-      </a>
-      <div class="desc">Cheris these memories forever</div>
-    </div>
-    <div class="gallery">
-      <a target="_blank" href="img/40.jpg">
-        <img src="img/40.jpg" alt="Mountains" width="1000" height="400">
-      </a>
-      <div class="desc">A memorable gift for those special moments</div>
-    </div>
-    <div class="gallery">
-      <a target="_blank" href="img/box1.jpg">
-        <img src="img/box1.jpg" alt="Mountains" width="1000" height="400">
-      </a>
-      <div class="desc">Designed with love in the UK</div>
-    </div>
-    <div class="gallery">
-      <a target="_blank" href="img/box2.jpg">
-        <img src="img/box2.jpg" alt="Mountains" width="1000" height="400">
-      </a>
-      <div class="desc">Handcrafted by artisans for your keepsakes</div>
-    </div> 
-
   </div>
+  
+  
   
 
   <div class="w3-content" style="max-width:1100px;">
@@ -273,7 +225,7 @@ div.desc {
       <!-- About Section -->
       <div class="w3-row w3-padding-64" id="about">
         <div class="w3-col m6 w3-padding-large w3-hide-small">
-         <img src="img/location.jpg" class="w3-round w3-image w3-opacity-min" alt="Table Setting" width="600" height="750">
+         <img src="img/bromley.jpg" class="w3-round w3-image w3-opacity-min" alt="Table Setting" width="600" height="750">
         </div>
     
         <div class="w3-col m6 w3-padding-large">
