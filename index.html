@@ -7,42 +7,7 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
-body,h1 {font-family: "Raleway", sans-serif}
-body, html {height: 100%}
-.bgimg {
-  background-image: url('img/box2.jpg');
-  min-height: 100%;
-  background-position: center;
-  background-size: cover;
-}
-div.gallery {
-  margin: 5px;
-  border: 1px solid #ccc;
-  float: left;
-  width: 180px;
-}
 
-div.gallery:hover {
-  border: 1px solid #777;
-}
-
-div.gallery img {
-  width: 100%;
-  height: auto;
-}
-
-div.desc {
-  padding: 15px;
-  text-align: center;
-}
-
-.content {
-    padding:20px;
-    width:450px;
-    position:relative;
-    background: rgb(204, 204, 204); /* Fallback for older browsers without RGBA-support */
-    background: rgba(204, 204, 204, 0.5);
-}
 
 /* Style all font awesome icons */
 .fa {
@@ -84,201 +49,207 @@ div.desc {
   color: white;
 }
 
+/* Background Vide */
+#background-video {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+/*image grid style */
+* {
+  box-sizing: border-box;
+}
+
+
+
+.row {
+  display: -ms-flexbox; /* IE 10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE 10 */
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+/* Create two equal columns that sits next to each other */
+.column {
+  -ms-flex: 25%; /* IE 10 */
+  flex: 0 1 25%;
+  padding: 0 4px;
+}
+
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
+}
+
+/*Header Style */
+.header{
+  width: 100%;
+  height: 5%;
+  background-color: rgba(0,0,0,0.2);
+  position: fixed;
+  z-index: 999;
+}
+
+.header ul{
+  text-align: center;
+}
+
+.header ul li{
+  list-style: none;
+  display: inline-block;
+}
+
+.header ul li a{
+  display: block;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #fff;
+  font-size: 10px;
+  font-family: 'Raleway', sans-serif;
+  letter-spacing: 2px;
+  font-weight: 100;
+  padding-left: 50px;
+  padding-right: 50px;
+  transition: all ease 0.5s;
+}
+
+.header ul li a:hover{
+  background-color: #211b4385;
+}
+
+.title {
+  text-align: center;
+  font-size: 50px;
+  font-family: 'Raleway', sans-serif;
+  letter-spacing: 10px;
+  font-weight: 500;
+}
+
 </style>
+
 <head>
-  <script>
-    // Open the Modal
-    function openModal() {
-      document.getElementById("myModal").style.display = "block";
-    }
-
-    // Close the Modal
-    function closeModal() {
-      document.getElementById("myModal").style.display = "none";
-    }
-
-    var slideIndex = 1;
-    showSlides(slideIndex);
-
-    // Next/previous controls
-    function plusSlides(n) {
-      showSlides(slideIndex += n);
-    }
-
-    // Thumbnail image controls
-    function currentSlide(n) {
-      showSlides(slideIndex = n);
-    }
-
-    function showSlides(n) {
-      var i;
-      var slides = document.getElementsByClassName("mySlides");
-      var dots = document.getElementsByClassName("demo");
-      var captionText = document.getElementById("caption");
-      if (n > slides.length) {slideIndex = 1}
-      if (n < 1) {slideIndex = slides.length}
-      for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
-      }
-      for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" active", "");
-      }
-      slides[slideIndex-1].style.display = "block";
-      dots[slideIndex-1].className += " active";
-      captionText.innerHTML = dots[slideIndex-1].alt;
-    }
-  </script>
+  <script></script>
 </head>
+
 <body>
 
-<div class="bgimg w3-display-container w3-animate-opacity w3-text-white" >
-  <div class="w3-display-topleft w3-padding-large w3-xlarge">
-    <img src="img/logo.png" class="w3-round w3-image " width="100" height="100">
-    by Maradeko Holding Ltd.
-  </div>
-  <div class="w3-display-middle" style="margin-top: 280px;">
-    <h1 class="content w3-jumbo w3-animate-top w3-center">TINY MELON</h1>
-    <hr class="w3-border-grey" style="margin:auto;width:40%">
-    <p class="w3-large w3-center">Your tiny stories cherished forever...</p>
-  </div>
-  <div class="w3-display-bottomleft w3-padding-large">
-    Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a>
-  </div>
-</div>
-
-<!-- Page content -->
-<div class="w3-content" style="max-width:1100px">
-
-    <!-- About Section -->
-    <div class="w3-row w3-padding-64" id="about">
-      <div class="w3-col m6 w3-padding-large w3-hide-small">
-       <img src="img/sea_watermelon.jpg" class="w3-round w3-image w3-opacity-min" alt="Table Setting" width="600" height="750">
-      </div>
-  
-      <div class="w3-col m6 w3-padding-large">
-        <h1 class="w3-center">About Tiny Melon</h1><br>
-        <h5 class="w3-center">Cherish your little storeis</h5>
-        <p class="w3-large">We are tinymelon and we know being a family is the most awesome, scary, hilarious, anxious, joyous and downright exhausting thing you'll ever do. Fraught moments stretch like eternity, while precious years go by in a heartbeat.
-  
-          Becoming a parent means you're never alone, but sometimes you feel exactly that. 
-          
-          We're right with you, because at Tinymelon, we're a family too. 
-          
-          So while you're bringing up humans, we're bringing up ideas.
-          
-          And, like you, putting our absolute all into it.
-          
-          We believe all families deserve the best we can give. Quality; naturally. Affordability; definitely. Compromise; not on our watch.
-          
-          We challenge ourselves to make your life easier. To swap niggles for giggles, from pregnancy to primary school and beyond. So that you can win this crazy-fun family thing! <!--<span class="w3-tag w3-light-grey">seasonal</span> ingredients.</p> -->
-        <p class="w3-large w3-text-grey w3-hide-medium">Tinymelon help you to cherish those little stories and relive the memories.</p>
-      </div>
-    </div>
+  <div class="header">
+    <nav>
+      <ul>
+        <li><a href="#" >Home</a></li>
+        <li><a href="#about" >About Us</a></li>
+        <li><a href="#producttitle">Products</a></li>
+        <li><a href="#products">Buy</a></li>
+        <li><a href="#contact">Contact Us</a></li>
+      </ul>
+    </nav>
     
+  </div>
+
+  <!-- The video -->
+  <div>
+    <video autoplay muted loop id="background-video" poster="img/watermelon.jpg">
+      <source src="img/knitting.mp4" type="video/mp4">
+    </video>
+  </div>
+
+  <!-- Page content -->
+  <div class="w3-content" style="max-width:1100px">
+
+      <!-- About Section -->
+      <div class="w3-row w3-padding-64" id="about">
+
+        <div class="w3-col m6 w3-padding-large">
+        <img src="img/sea_watermelon.jpg" class="w3-round w3-image w3-opacity-min" alt="Table Setting" width="600" height="750">
+        </div>
+    
+        <div class="w3-col m6 w3-padding-large">
+          <h1 class="w3-center">About Tiny Melon</h1><br>
+          <h5 class="w3-center">Cherish your little stories</h5>
+          <p class="w3-large">We are tinymelon and we know being a family is the most awesome, scary, hilarious, anxious, joyous and downright exhausting thing you'll ever do. Fraught moments stretch like eternity, while precious years go by in a heartbeat.
+    
+            Becoming a parent means you're never alone, but sometimes you feel exactly that. 
+            
+            We're right with you, because at Tinymelon, we're a family too. 
+            
+            So while you're bringing up humans, we're bringing up ideas.
+            
+            And, like you, putting our absolute all into it.
+            
+            We believe all families deserve the best we can give. Quality; naturally. Affordability; definitely. Compromise; not on our watch.
+            
+            We challenge ourselves to make your life easier. To swap niggles for giggles, from pregnancy to primary school and beyond. So that you can win this crazy-fun family thing! <!--<span class="w3-tag w3-light-grey">seasonal</span> ingredients.</p> -->
+          <p class="w3-large w3-text-grey w3-hide-medium">At Tinymelon we bring products that are made with hand by artisans from Vietnam .</p>
+        </div>
+      </div>
+      
+      <hr>
+  </div>
+  
+
+  <div class="title" id="producttitle">
+    <h2>OUR PRODUCTS</h2>    
+  </div>
+  
+
+  <div class="row w3-content" id="products">   
     <hr>
+    <div class="column">
+      <img src="img/bunny/1.jpg" width="100%">
+      <img src="img/bunny/2.jpg" width="100%">
+      <img src="img/bunny/3.jpg" width="100%">
+      <img src="img/bunny/4.jpg" width="100%">
+      <img src="img/bunny/5.jpg" width="100%">
+      <img src="img/bunny/6.jpg" width="100%">
+      <img src="img/bunny/7.jpg" width="100%">
+    </div>
+    <div class="column">
+      <img src="img/bunny/8.jpg" width="100%">
+      <img src="img/bunny/9.jpg" width="100%">
+      <img src="img/bunny/10.jpg" width="100%">
+      <img src="img/bunny/11.jpg" width="100%">
+      <img src="img/bunny/12.jpg" width="100%">
+      <img src="img/bunny/13.jpg" width="100%">
+    </div>
+    <div class="column">
+      <img src="img/bunny/14.jpg" width="100%">
+      <img src="img/bunny/15.jpg" width="100%">
+      <img src="img/bunny/16.jpg" width="100%">
+      <img src="img/bunny/17.jpg" width="100%">
+      <img src="img/bunny/18.jpg" width="100%">
+      <img src="img/bunny/19.jpg" width="100%">
+      <img src="img/bunny/20.jpg" width="100%">
+    </div>
+    <div class="column">
+      <img src="img/bunny/21.jpg" width="100%">
+      <img src="img/bunny/22.jpg" width="100%">
+      <img src="img/bunny/23.jpg" width="100%">
+      <img src="img/bunny/24.jpg" width="100%">
+      <img src="img/bunny/25.jpg" width="100%">
+      <img src="img/bunny/26.jpg" width="100%">
+    </div>
   </div>
-
-
-  <!-- Produt content 
-  <div class="w3-content w3-display-container">
-    <img class="mySlides" src="img/1.jpg">
-    <img class="mySlides" src="img/10.jpg">
-    <img class="mySlides" src="img/2.jpg">
-    <div class="w3-center w3-display-bottommiddle" style="width:100%">
-      <div class="w3-left" onclick="plusDivs(-1)">&#10094;</div>
-      <div class="w3-right" onclick="plusDivs(1)">&#10095;</div>
-      <span class="w3-badge demo w3-border" onclick="currentDiv(1)"></span>
-      <span class="w3-badge demo w3-border" onclick="currentDiv(2)"></span>
-      <span class="w3-badge demo w3-border" onclick="currentDiv(3)"></span>
-    </div>
-    Photo by Mediamodifier, Janko Ferlič, Christian Fickinger, Manuel Schinner on Unsplash
-  </div>
-  -->
-
-  <div class="w3-content">
-    <div class="gallery">
-      <a target="_blank" href="img/1.jpg">
-        <img src="img/1.jpg" alt="Cinque Terre" width="1000" height="500">
-      </a>
-      <div class="desc">Baby's little firsts</div>
-    </div>
-    
-    <div class="gallery">
-      <a target="_blank" href="img/10.jpg">
-        <img src="img/10.jpg" alt="Forest" width="1000" height="400">
-      </a>
-      <div class="desc">A keep sake box for your memories</div>
-    </div>
-    
-    <div class="gallery">
-      <a target="_blank" href="img/2.jpg">
-        <img src="img/2.jpg" alt="Northern Lights" width="1000" height="400">
-      </a>
-      <div class="desc">The tiny steps into your new life</div>
-    </div>
-    
-    <div class="gallery">
-      <a target="_blank" href="img/20.jpg">
-        <img src="img/20.jpg" alt="Mountains" width="1000" height="400">
-      </a>
-      <div class="desc">Babies first toys</div>
-    </div>
-
-    <div class="gallery">
-      <a target="_blank" href="img/30.jpg">
-        <img src="img/30.jpg" alt="Mountains" width="1000" height="400">
-      </a>
-      <div class="desc">Save the cards and messages from loved ones</div>
-    </div>
-
-    <div class="gallery">
-      <a target="_blank" href="img/3.jpg">
-        <img src="img/3.jpg" alt="Mountains" width="1000" height="400">
-      </a>
-      <div class="desc">Little socks to remind you of the little feet</div>
-    </div>
-
-    
-    
-    <div class="gallery">
-      <a target="_blank" href="img/4.jpg">
-        <img src="img/4.jpg" alt="Mountains" width="1000" height="400">
-      </a>
-      <div class="desc">Cheris these memories forever</div>
-    </div>
-    <div class="gallery">
-      <a target="_blank" href="img/40.jpg">
-        <img src="img/40.jpg" alt="Mountains" width="1000" height="400">
-      </a>
-      <div class="desc">A memorable gift for those special moments</div>
-    </div>
-    <div class="gallery">
-      <a target="_blank" href="img/box1.jpg">
-        <img src="img/box1.jpg" alt="Mountains" width="1000" height="400">
-      </a>
-      <div class="desc">Designed with love in the UK</div>
-    </div>
-    <div class="gallery">
-      <a target="_blank" href="img/box2.jpg">
-        <img src="img/box2.jpg" alt="Mountains" width="1000" height="400">
-      </a>
-      <div class="desc">Handcrafted by artisans for your keepsakes</div>
-    </div> 
-
-  </div>
+ 
+  
   
 
   <div class="w3-content" style="max-width:1100px;">
   
       <!-- About Section -->
-      <div class="w3-row w3-padding-64" id="about">
+      <div class="w3-row w3-padding-64" id="contact">
         <div class="w3-col m6 w3-padding-large w3-hide-small">
-         <img src="img/location.jpg" class="w3-round w3-image w3-opacity-min" alt="Table Setting" width="600" height="750">
+         <img src="img/bromley.jpg" class="w3-round w3-image w3-opacity-min" alt="Table Setting" width="600" height="750">
         </div>
     
         <div class="w3-col m6 w3-padding-large">
           <h1 class="w3-center">Contact US</h1><br>
-          <h5 class="w3-large">We are a small London based business</h5>
+          <h5 class="w3-large">We are a small business based in Bromley, London</h5>
           <p class="w3-large"> Get in touch send us an e-mail or call us<!--<span class="w3-tag w3-light-grey">seasonal</span> ingredients.</p> -->
           <a href="tel:+44 7803297517"><h5>Call us now</h5></a>
           <a href="tel:+44 7803297517"><h4>+44 7803 297 517</h4></a>
@@ -287,12 +258,12 @@ div.desc {
           <a href="https://www.facebook.com/Tiny-Melon-114011934268655" class="fa fa-facebook" target=”_blank”></a>
           <a href="https://www.instagram.com/tinymelon.co.uk/" class="fa fa-instagram"  target=”_blank”></a>
           <a href="#" class="fa fa-twitter"></a>
-          <a href='mailto:maradeko.holding@gmail.com' class="fa fa-envelope-square"></a>
+          <a href='mailto:supportg@tinymelon.co.uk' class="fa fa-envelope-square"></a>
         </div>
       </div>
       
       <hr>
-    </div>
+  </div>
 
 
 <!--================Footer Area =================-->
